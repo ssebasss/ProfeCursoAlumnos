@@ -5,9 +5,12 @@ import Entidades.Curso;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AltaCurso {
+public class ServicioAltaVendedor {
+
+
 Scanner sc = new Scanner(System.in).useDelimiter("\n");
 public Curso AltaCurso(){
+
     Curso Ca= new Curso();
 
     System.out.println("ingrese nombre del curso");
@@ -38,14 +41,12 @@ public Curso AltaCurso(){
       listaAlumnos.add(alunmnos);
     }
     Ca.setAlumnos(listaAlumnos);   // aca supuestamente guarde los 5 alumnos
-
    return Ca;
 }
 
-public static double calcularGananciaSemanal(Curso Ca){
+public double calcularGananciaSemanal(Curso Ca){
 double calcularGananciaSemanal= (double) Ca.getCantidadHorasPorDia()*Ca.getPrecioPorHora()*Ca.getAlumnos().size()*Ca.getcantidadDiasPorSemana();
 return calcularGananciaSemanal;
-
 }
 
 
