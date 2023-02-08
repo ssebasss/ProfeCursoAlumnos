@@ -6,8 +6,11 @@ public class Main {
 
         ServicioAltaVendedor serCurso = new ServicioAltaVendedor();
         Curso Ca=  serCurso.AltaCurso();
-        System.out.println(serCurso.toString());
-        serCurso.calcularGananciaSemanal(Ca);
+        //System.out.println(Ca.toString());
+        System.out.println("las ganancias semanales es $ "+serCurso.calcularGananciaSemanal(Ca));
+
+        serCurso.mostrarDatos(Ca);
+
 
             }
 }
